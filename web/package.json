@@ -15,7 +15,8 @@
     "react-loading-animation": "^1.4.0",
     "react-modal": "^3.1.11",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.1.1",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,11 +25,14 @@
     "eject": "react-scripts eject",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
     "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
-    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
+    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "autoprefixer-stylus": "^0.14.0",
     "concurrently": "^3.5.1",
     "stylus": "^0.54.5"
-  }
+  },
+  "snyk": true
 }
